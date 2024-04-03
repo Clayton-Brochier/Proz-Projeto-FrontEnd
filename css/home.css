@@ -419,6 +419,8 @@ div#menu-itens {
   background-color: var(--fundoSectionMain);
   text-align: center;
   color: var(--branco);
+  margin: 20px;
+  padding: 10px;
 }
 
 @media screen and (max-width: 865px) {
@@ -437,6 +439,7 @@ div#menu-itens {
 }
 
 .itens h3 {
+  margin-top: 50px;
   padding: 5px 0 5px 0;
   font-size: 1.8rem;
   text-transform: uppercase;
