@@ -1,0 +1,68 @@
+:root{
+  --fundoBody: hsl(0 0% 10%);
+  --fundoHeader: rgba(0, 0, 0, 0.6);
+  --fundoFooter: rgb(19,27,35);
+  --fundoSectionMain: #100D0E;
+  --sombraBotao: hsl(0 0% 100% / 0.15);
+  --branco: #fff;
+  --preto: #000;
+}
+
+h3{
+  color: #fff;
+  font-size: 3.2em;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  
+}
+
+.bg img{
+  margin-top: 4%;
+  margin-left: 23%;
+  padding: 0;
+  width: 800px;
+  min-height: 150px;
+  align-items: center;
+
+}
+
+.footer {
+  height: 25px;
+  background-color: var(--fundoFooter);
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.footer p {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 749px) {
+  .footer {
+    height: 20px;
+  }
+  .footer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1223px) {
+  .conteiner-menu {
+    display: block;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .conteiner-menu {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+  }
+}

@@ -1,0 +1,93 @@
+.form {
+  background-color: black; /* Use section background color */
+  padding: 20px; /* Add some padding for better spacing */
+  margin: 50px auto; /* Center the form horizontally with some top margin */
+  max-width: 600px; /* Set a maximum width for responsiveness */
+  border-radius: 5px; /* Add slight rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box-shadow for depth */
+}
+
+.form h3 {
+  text-align: center; /* Center align the form title */
+  margin-bottom: 20px; /* Add some space below the title */
+  color: var(--branco); /* Use white text color */
+}
+
+.form label {
+  display: block; /* Display labels on their own line */
+  margin-bottom: 5px; /* Add some space below labels */
+  color: var(--branco); /* Use white text color */
+  font-weight: bold; /* Make labels bold for better readability */
+}
+
+input{
+  color: #000;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form input[type="datetime-local"],
+.form select,
+.form textarea {
+  width: 100%; /* Set full width for input fields */
+  padding: 10px; /* Add padding for better user experience */
+  border: 1px solid var(--sombraBotao); /* Use border color from base.css */
+  border-radius: 3px; /* Add slight rounded corners */
+  font-size: 16px; /* Set a comfortable font size */
+  margin-bottom: 15px; /* Add some space between input fields */
+}
+
+.form .txt-input {
+  /* Remove this class if not needed anymore */
+}
+
+.form select {
+  /* Add styling for select element if needed */
+}
+
+#adicional-info{
+  width: 99%;
+  height: 200px;
+  font-size: 16px;
+  vertical-align: top;
+  border: none;
+  border-radius: 8px;
+}
+
+
+.form button {
+  background-color: var(--bg); /* Use button background color from base.css */
+  border: none; /* Remove default border */
+  color: var(--branco); /* Use white text color */
+  padding: 10px 20px; /* Add padding for better look */
+  font-size: 16px; /* Set a comfortable font size */
+  font-weight: bold; /* Make button text bold */
+  cursor: pointer; /* Indicate clickable behavior */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-size 0.24s; /* Use button transition from base.css */
+}
+
+.form button:hover {
+  background-size: 200%; /* Use button hover effect from base.css */
+  background-color: #000;
+}
+
+.form p {
+  color: var(--branco); /* Use white text color */
+  font-size: 14px; /* Set a slightly smaller font size */
+  line-height: 1.5; /* Adjust line-height for better readability */
+  margin-top: 20px; /* Add some space above the paragraph */
+}
+
+.d-flex-chbx{
+  display: flex;
+}
+
+.chk-input{
+  margin-left: 2%;
+}
+
+.form input[type="checkbox"] {
+  margin-right: 5px; /* Add some space after checkboxes */
+}

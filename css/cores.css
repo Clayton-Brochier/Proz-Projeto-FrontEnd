@@ -1,0 +1,9 @@
+:root{
+  --fundoBody: hsl(0 0% 10%);
+  --fundoHeader: rgba(0, 0, 0, 0.6);
+  --fundoFooter: rgb(19,27,35);
+  --fundoSectionMain: #100D0E;
+  --sombraBotao: hsl(0 0% 100% / 0.15);
+  --branco: #fff;
+  --preto: #000;
+}

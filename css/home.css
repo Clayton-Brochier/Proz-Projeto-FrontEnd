@@ -1,0 +1,622 @@
+@import url("./cores.css");
+
+:root {
+  --x: 0;
+  --y: 0;
+  --xp: 0;
+  --yp: 0;
+  --hue: calc(0 + (var(--xp) * 500));
+  --bg: var(--fundoBody);
+  --size: 100px;
+  --glow: radial-gradient(50% 50% at center,
+      hsl(var(--hue)80% 85%),
+      hsl(var(--hue)80% 70%),
+      transparent) calc((var(--x) * 1px) - (var(--size) *0.5)) calc((var(--y) * 1px) - (var(--size) *0.5)) / var(--size) var(--size) no-repeat fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  /* --fundoBody: hsl(0 0% 10%); */
+}
+
+html {
+  background-color: var(--fundoSectionMain);
+}
+
+element.style {
+  margin: 0;
+  padding: 0;
+}
+
+.conteiner-menu {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.99);
+  max-height: 100% !important;
+  overflow: hidden;
+  width: 100vw;
+}
+
+@media screen and (max-width: 1223px) {
+  .conteiner-menu {
+    display: block;
+    justify-content: space-around;
+
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .conteiner-menu {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+  }
+}
+
+.conteiner-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.logo-mercedes {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  color: var(--branco);
+  padding: 1px;
+}
+
+@media screen and (max-width: 865px) {
+  .logo-mercedes {
+    margin-top: 0;
+    padding-top: 10px;
+  }
+}
+
+.logo-mercedes img {
+  width: 45px;
+  height: 45px;
+  padding: 1px;
+  margin: 5px 20px 0 20px;
+}
+
+@media screen and (max-width: 420px) {
+  .logo-mercedes img {
+    width: 35px;
+    height: 35px;
+    padding: 1px;
+    margin: 2px 10px 0 10px;
+  }
+}
+
+.logo-mercedes h1 {
+  font-size: 2rem;
+  white-space: nowrap;
+  padding-top: 5px;
+}
+
+@media screen and (max-width: 865px) {
+  .logo-mercedes h1 {
+    display: block;
+    color: whitesmoke;
+    font-size: 2.0rem;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+@media screen and (max-width: 1323px) {
+  .menu {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  
+
+  .menu-li {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  .menu {
+    padding: 10px;
+    margin-top: 15px;
+
+  }
+}
+
+.burger {
+  display: none;
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+}
+
+@media screen and (max-width: 865px) {
+  .burger {
+    display: block;
+  }
+}
+
+.menu-li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+@media screen and (max-width: 865px) {
+  .menu-li {
+    display: none;
+    position: relative;
+    background-color: transparent;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 0 0 0;
+    padding: 0;
+  }
+
+  .menu-li.active {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    right: 0; 
+    width: 100%; 
+  }
+}
+
+.menu-li li {
+  margin-left: 10px;
+  flex: 0 0 auto;
+}
+
+@media screen and (max-width: 970px) {
+  .menu-li li {
+    margin-left: 0;
+  }
+}
+
+.btn-nav {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div#menu-itens {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  padding-top: 3px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 865px) {
+  div#menu-itens {
+    display: block;
+    display: none;
+  }
+}
+
+.btn-nav {
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1ch;
+  background: var(--bg);
+  border: 4px solid transparent;
+  box-shadow: 0 1px var(--sombraBotao);
+  cursor: pointer;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box, var(--glow), linear-gradient(var(--preto), var(--preto)) border-box;
+  transition: background-size 0.24s;
+  touch-action: none;
+  position: relative;
+  padding: 1rem 2 rem;
+}
+
+.btn-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 1px var(--sombraBotao) inset;
+  background: var(--bg);
+  z-index: 2;
+  border-radius: 1rem;
+}
+
+.btn-nav span {
+  background: var(--glow), var(--preto);
+  background-clip: text;
+  color: var(--branco);
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  inset: 0;
+}
+
+:root:has(.btn-nav:active) {
+  --size: 200px;
+}
+
+.btn-nav::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  filter: blur(20px);
+  border: 4px solid transparent;
+  background: var(--glow);
+  border-radius: 1rem;
+}
+
+.conteiner-menu li {
+  color: var(--branco);
+  display: inline-block;
+  margin: 0 5px;
+  text-decoration: none;
+  padding: 0;
+  line-height: 60px;
+  transition: 0.5s;
+
+}
+
+.conteiner-menu a {
+  color: var(--branco);
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 0 10px;
+  line-height: 60px;
+  transition: 0.5s;
+}
+
+.home {
+  height: 89vh;
+  background-image: url(../assets/m-amg-cla-coupe-homePrincipal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media screen and (max-width: 865px) {
+  .home {
+    background-image: url(../assets/home-media-Mercedes-Benz-CLA-preta.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+  }
+}
+
+.text-chamada {
+  display: block;
+  justify-content: right;
+  align-items: center;
+  color: var(--branco);
+  padding: 60px;
+}
+
+@media screen and (max-width: 970px) {
+  .text-chamada {
+    display: block;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .text-chamada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .text-chamada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.text-chamada h2 {
+  font-size: 50px;
+  margin: 200px 0 0 0;
+}
+
+@media screen and (max-width: 970px) {
+  .text-chamada h2 {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .text-chamada h2 {
+    margin-top: 0;
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .text-chamada h2 {
+    margin-top: 0;
+    font-size: 30px;
+  }
+}
+
+.text-chamada h3 {
+  font-size: 3.7rem;
+}
+
+@media screen and (max-width: 865px) {
+  .text-chamada h3 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .text-chamada h3 {
+    font-size: 25px;
+  }
+}
+
+.text-chamada img {
+  height: 10vh;
+}
+
+@media screen and (max-width: 970px) {
+  .text-chamada img {
+    width: 450px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .text-chamada img {
+    width: 350px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .text-chamada img {
+    width: 250px;
+    height: 30px;
+  }
+}
+
+.itens {
+  height: 100vh;
+  background-color: var(--fundoSectionMain);
+  text-align: center;
+  color: var(--branco);
+}
+
+@media screen and (max-width: 865px) {
+  .itens {
+    background-color: var(--fundoSectionMain);
+    text-align: center;
+    color: var(--branco);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .itens {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.itens h3 {
+  padding: 5px 0 5px 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+@media screen and (max-width: 660px) {
+  .itens h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .itens h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .itens h3 {
+    font-size: 1rem;
+  }
+}
+
+.itens p {
+  font-size: 1.2rem;
+  justify-content: center;
+  padding: 3px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1153px) {
+  .itens p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .itens p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .itens p {
+    font-size: 1rem;
+  }
+}
+
+.center-produto-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+@media screen and (max-width: 749px) {
+  .center-produto-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: none;
+  }
+}
+
+.center-produto-container h3 {
+  border: solid 1px white;
+  width: 25vw;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 750px) {
+  .center-produto-container h3 {
+    width: 500px;
+  }
+}
+
+.center-produto-container p {
+  text-align: justify;
+  width: 25vw;
+}
+
+@media screen and (max-width: 750px) {
+  .center-produto-container p {
+    text-align: justify;
+    width: 500px;
+    margin-top: 10px;
+  }
+}
+
+.box {
+  width: 25vw;
+}
+
+@media screen and (max-width: 749px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    padding: 10px 0 10px 0;
+    margin: 10px 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 653px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+  }
+
+  .box h3 {
+    width: 400px;
+  }
+
+  .box p {
+    width: 400px;
+  }
+}
+
+.box img {
+  width: 25vw;
+  object-fit: cover;
+  margin-bottom: 10px
+}
+
+@media screen and (max-width: 749px) {
+  .box img {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 653px) {
+  .box img {
+    width: 400px;
+  }
+}
+
+.footer {
+  height: 25px;
+  background-color: var(--fundoFooter);
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.footer p {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 749px) {
+  .footer {
+    height: 20px;
+  }
+
+  .footer p {
+    font-size: 16px;
+  }
+}
+
+/* Responsividade */
+@media screen and (max-width: 1223px) {
+  .conteiner-menu {
+    display: block;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .conteiner-menu {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+  }
+}
