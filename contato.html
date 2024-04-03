@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/contato.css">
+    <link rel="stylesheet" href="./css/cores.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="./js/menu-hamburguer.js" defer></script>
+    <script src="./js/interatividade.js" defer></script>
+    <script src="https://kit.fontawesome.com/313ea3afe5.js" defer crossorigin="anonymous"></script>
+    <title>Mercedes-Benz &#169; - CLA Coupé</title>
+    <!--favicon-->
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="conteiner-menu">
+            <div class="logo-mercedes">
+                <img 
+                    src="./assets/logo-mercedes.png" 
+                    alt="Logo Mercedes-Benz" 
+                    class="logo-mercedes">
+                <h1>Mercedes-Benz</h1>
+            </div>
+            <div class="menu" id="menu">
+                <nav id="navbar">
+                    <span id="burger" class="burger">&#9776;</span>
+                    <ul id="menu-li" class="menu-li">
+                        <li><a id="" class="active-menu btn-nav" href="./index.html"><span>Home</span></a></li>
+                        <li><a class="btn-nav" href="./tecnologia.html"><span>Tecnologia</span></a></li>
+                        <li><a class="btn-nav" href="./especificacoes.html"><span>Especificações</span></a></li>
+                        <li><a class="btn-nav" href="./seguranca.html"><span>Segurança</span></a></li>
+                        <li><a class="btn-nav" href="./contato.html"><span>Contato</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="form">
+        <h3>Informe seus dados e marque um test-drive</h3>
+        <form action="contact">
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" class="txt-input"/>
+            
+            </div>
+            <br>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" class="txt-input"> 
+           </div>
+
+            <br>
+
+            <div>
+                <label for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" class="txt-input"> 
+            </div>
+
+            <br>
+
+            <div>
+                <label for="car-model">Selecione o modelo</label>
+                <select name="car-model" id="car-model" class="txt-input">
+                    <option value="AMG CLA 35 4MATIC">Mercedes - AMG CLA 35 4MATIC</option>
+                    <option value="CLA 45 S 4MATIC+">Mercedes - CLA 45 S 4MATIC+</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="adicional-info">Informações adicionais</label>
+                <input type="textarea" name="adicional-info" id="adicional-info">
+            </div>
+       
+            <br>    
+            
+            <div style="margin-top:2.3%;">
+               <label for="data-test">Selecione a Data e o horário para o test-drive</label>
+               <input type="datetime-local" name="data-test" id="data-test" min="09:00" max="18:00">
+            </div>
+
+            <br>
+
+                
+            <div class="d-flex-chbx" style="margin-top: 8%;">
+                <label for="chk-email">Desejo receber contato por e-mail </label>
+                <input type="checkbox" name="chk-email" id="chk-email" class="chk-input">
+            </div>
+            
+            <br>
+
+            <div class="d-flex-chbx">
+                <label for="chk-tel">Desejo receber contato por telefone </label>
+                <input type="checkbox" name="chk-tel" id="chk-tel" class="chk-input">
+            </div>
+            
+            <br>
+
+            <div class="d-flex-chbx">
+                <label for="chk-wpp">Desejo receber contato por WhatsApp </label>
+                <input type="checkbox" name="chk-wpp" id="chk-wpp" class="chk-input">
+            </div>
+                            
+            
+            <br>
+
+            <div>
+                <button id="btn-submit" style="width: 99%; margin-top:3%;">Enviar</button>
+            </div>
+        </form>
+
+        <p style="margin-top:6%;">Os dados fornecidos serão utilizados pela Mercedes-Benz Cars & Vans e seus concessionários, para o envio de ofertas e informações sobre produtos e serviços Mercedes-Benz. <br> Para detalhes sobre seus direitos e demais informações, acesse a Política de Privacidade da Mercedes-Benz Cars & Vans. <br>
+            Ao selecionar o(s) canal(is) abaixo, confirmo meu consentimento para que a Mercedes-Benz Cars & Vans, seus concessionários e <br> fornecedores parceiros utilizem meus dados pessoais acima fornecidos (nome, e-mail, telefone), para o envio de ofertas, convites para eventos e informações sobre produtos e serviços Mercedes-Benz!
+        </p>
+
+    </div>
+
+
+    <div class="footer">
+        <footer>
+            <p>Mercedes-Benz &#169; Todos os direitos reservados. Projeto proposto por PROZ + AWS</p>
+        </footer>
+    </div>
+    
+    </section>
+    <script src="https://kit.fontawesome.com/313ea3afe5.js" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
