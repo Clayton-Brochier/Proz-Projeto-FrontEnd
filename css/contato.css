@@ -73,6 +73,12 @@ input{
   background-color: #000;
 }
 
+#car-model {
+  color: white; /* Ajuste para a cor que forneça um bom contraste com o fundo */
+  background-color: black; /* Ajuste se necessário */
+}
+
+
 .form p {
   color: var(--branco); /* Use white text color */
   font-size: 14px; /* Set a slightly smaller font size */
